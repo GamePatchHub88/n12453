@@ -1,0 +1,249 @@
+
+/* ===== RESET ===== */
+:root {
+  --color-primary: #0080ff;
+  --color-primary-dark: #0065cc;
+  --color-accent: #fa5757;
+  --color-muted: #9194a1;
+  --color-dark: #252646;
+  --color-off-white: #f7f7f7;
+  --color-white: #fff;
+  --color-border: #e0e0ee;
+  --pad: 2rem;
+  --radius-sm: 1rem;
+  --radius-md: 2rem;
+  --radius-lg: 4rem;
+  --desktop-width: 900px;
+  --transition: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: hsl(221, 100%, 96%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ===== RESULT CARD ===== */
+.result-card {
+  width: 350px;
+  padding: 4rem 3rem;
+  text-align: center;
+  border-radius: 3rem;
+  background:  hsl(241, 81%, 54%);
+}
+
+.result-header {
+  margin-bottom: 2rem;
+}
+
+.result-title {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.result-circle {
+  width: 250px;
+  height: 250px;
+  margin: 2rem auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.result-score {
+  font-size: 6rem;
+  line-height: 1;
+  color: white;
+  font-weight: 800;
+}
+
+.result-circle .result-total {
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.result-text {
+  margin-top: 2rem;
+}
+
+.result-grade {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.result-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== SUMMARY CARD ===== */
+.summary-card {
+  width: 400px;
+  padding: 4rem;
+  border-radius: 3rem;
+  background-color: white;
+}
+
+.summary-title {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.summary-list {
+  margin-bottom: 3rem;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 1.5rem 1.2rem;
+  border-radius: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.item-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.item-label {
+  flex-grow: 1;
+  color: var(--color-dark);
+}
+
+.item-score {
+  font-size: 1.6rem;
+  color: var(--color-muted);
+}
+
+.item-score strong {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+/* ألوان العناصر */
+.summary-item.reaction {
+  background-color: rgba(255, 87, 87, 0.08);
+}
+
+.summary-item.reaction .item-label {
+  color: #ff5757;
+}
+
+.summary-item.memory {
+  background-color: rgba(255, 176, 31, 0.08);
+}
+
+.summary-item.memory .item-label {
+  color: #ffb01f;
+}
+
+.summary-item.verbal {
+  background-color: rgba(0, 189, 167, 0.08);
+}
+
+.summary-item.verbal .item-label {
+  color: #00bda7;
+}
+
+.summary-item.visual {
+  background-color: rgba(17, 90, 226, 0.08);
+}
+
+.summary-item.visual .item-label {
+  color: #115ae2;
+}
+
+/* ===== BUTTON ===== */
+.btn-continue {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  background-color: var(--color-dark);
+  color: white;
+  font-weight: 600;
+  transition: background-color var(--transition);
+}
+
+.btn-continue:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+@media (max-width:768px) {
+  .container{
+    margin: 0;
+    width: 99%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .result-card {
+    width: 100%;
+  }
+  .summary-card{ 
+    width: 100%;
+  ;
+  }
+}
